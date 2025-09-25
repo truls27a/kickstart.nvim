@@ -172,8 +172,22 @@ vim.o.confirm = true
 -- Press jk quickly in insert mode to return to normal mode
 vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert -> normal', silent = true })
 
--- Toggle file sidebar when
+-- Toggle file sidebar
 vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', { desc = 'Toggle Neo-tree' })
+
+-- Terminals
+vim.keymap.set('n', '<leader>tt', function()
+  vim.cmd 'terminal'
+end, { desc = 'Terminal (here)' })
+vim.keymap.set('n', '<leader>ts', function()
+  vim.cmd 'split | terminal'
+end, { desc = 'Terminal (split)' })
+vim.keymap.set('n', '<leader>tv', function()
+  vim.cmd 'vsplit | terminal'
+end, { desc = 'Terminal (vsplit)' })
+vim.keymap.set('n', '<leader>tb', function()
+  vim.cmd 'tabnew | terminal'
+end, { desc = 'Terminal (tab)' })
 
 -- Clear highlights on search when pressing <Esc> in normal mode
 --  See `:help hlsearch`
