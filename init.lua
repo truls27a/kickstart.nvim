@@ -169,8 +169,12 @@ vim.o.confirm = true
 -- [[ Basic Keymaps ]]
 --  See `:help vim.keymap.set()`
 
--- Press jk quickly in insert mode to return to normal mode
-vim.keymap.set('i', 'jk', '<Esc>', { desc = 'Exit insert -> normal', silent = true })
+-- Press jk quickly to return to Normal mode
+-- Works in Insert, Visual, and Select mode
+vim.keymap.set({ 'i', 'v', 's' }, 'jk', '<Esc>', { desc = 'Exit → Normal', silent = true })
+
+-- In terminal buffers, jk leaves terminal-insert and enters Normal mode
+vim.keymap.set('t', 'jk', [[<C-\><C-n>]], { desc = 'Terminal: exit to Normal', silent = true })
 
 -- Toggle file sidebar
 vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', { desc = 'Toggle Neo-tree' })
