@@ -15,6 +15,9 @@ return {
 
     -- Allows extra capabilities provided by blink.cmp
     'saghen/blink.cmp',
+
+    -- JSON/YAML schemas
+    'b0o/schemastore.nvim',
   },
   config = function()
     -- Brief aside: **What is LSP?**
@@ -207,6 +210,74 @@ return {
       -- But for many setups, the LSP (`ts_ls`) will work just fine
       -- ts_ls = {},
       --
+
+      rust_analyzer = {
+        settings = {
+          ['rust-analyzer'] = {
+            cargo = {
+              allFeatures = true,
+            },
+            checkOnSave = {
+              command = 'clippy',
+            },
+          },
+        },
+      },
+
+      pyright = {
+        settings = {
+          python = {
+            analysis = {
+              typeCheckingMode = 'basic',
+              autoSearchPaths = true,
+              useLibraryCodeForTypes = true,
+            },
+          },
+        },
+      },
+
+      ts_ls = {},
+
+      bashls = {},
+
+      jsonls = {
+        settings = {
+          json = {
+            schemas = require('schemastore').json.schemas(),
+            validate = { enable = true },
+          },
+        },
+      },
+
+      yamlls = {
+        settings = {
+          yaml = {
+            schemaStore = {
+              enable = false,
+              url = "",
+            },
+            schemas = require('schemastore').yaml.schemas(),
+          },
+        },
+      },
+
+      marksman = {},
+
+      html = {
+        filetypes = { 'html', 'templ' },
+      },
+
+      cssls = {},
+
+      tailwindcss = {
+        filetypes = { 'html', 'css', 'scss', 'javascript', 'javascriptreact', 'typescript', 'typescriptreact', 'vue', 'svelte' },
+      },
+
+      eslint = {
+        settings = {
+          workingDirectory = { mode = "auto" },
+        },
+      },
 
       lua_ls = {
         -- cmd = { ... },
