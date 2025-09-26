@@ -40,7 +40,7 @@ require('lazy').setup({
   { import = 'kickstart.plugins' },
 
   { import = 'custom.plugins' },
- 
+
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
   -- In normal mode type `<space>sh` then write `lazy.nvim-plugin`

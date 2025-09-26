@@ -32,8 +32,13 @@ vim.keymap.set('n', '<S-l>', '<cmd>BufferLineCycleNext<CR>', { desc = 'Next buff
 -- Buffer management
 vim.keymap.set('n', '<leader>bp', '<cmd>bdelete<CR>', { desc = 'Close buffer' })
 vim.keymap.set('n', '<leader>bP', '<cmd>BufferLineCloseOthers<CR>', { desc = 'Close other buffers' })
+vim.keymap.set('n', '<leader>ba', '<cmd>%bdelete|edit#|bdelete#<CR>', { desc = 'Close all buffers' })
 vim.keymap.set('n', '<leader>bl', '<cmd>BufferLineCloseLeft<CR>', { desc = 'Close buffers to left' })
 vim.keymap.set('n', '<leader>br', '<cmd>BufferLineCloseRight<CR>', { desc = 'Close buffers to right' })
+
+-- Buffer rearrangement
+vim.keymap.set('n', '<leader>bmh', '<cmd>BufferLineMovePrev<CR>', { desc = 'Move buffer left' })
+vim.keymap.set('n', '<leader>bml', '<cmd>BufferLineMoveNext<CR>', { desc = 'Move buffer right' })
 
 -- Jump to buffer by position
 vim.keymap.set('n', '<leader>1', '<cmd>BufferLineGoToBuffer 1<CR>', { desc = 'Go to buffer 1' })
