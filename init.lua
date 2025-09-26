@@ -1,14 +1,12 @@
 -- [[ Load configuration modules ]]
-require('kickstart.globals')
-require('kickstart.options')
-require('kickstart.keymaps')
-require('kickstart.autocommands')
+require 'kickstart.globals'
+require 'kickstart.options'
+require 'kickstart.keymaps'
+require 'kickstart.autocommands'
 
-require('custom.options')
-require('custom.keymaps')
-require('custom.autocommands')
-
-
+require 'custom.options'
+require 'custom.keymaps'
+require 'custom.autocommands'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
