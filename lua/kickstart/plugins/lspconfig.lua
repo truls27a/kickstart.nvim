@@ -218,7 +218,7 @@ return {
               allFeatures = true,
             },
             checkOnSave = {
-              command = 'clippy',
+              command = 'check',
             },
           },
         },
