@@ -254,7 +254,7 @@ return {
           yaml = {
             schemaStore = {
               enable = false,
-              url = "",
+              url = '',
             },
             schemas = require('schemastore').yaml.schemas(),
           },
@@ -264,7 +264,7 @@ return {
       marksman = {},
 
       html = {
-        filetypes = { 'html', 'templ' },
+        filetypes = { 'html', 'templ', 'htmldjango', 'jinja' },
       },
 
       cssls = {},
@@ -275,7 +275,7 @@ return {
 
       eslint = {
         settings = {
-          workingDirectory = { mode = "auto" },
+          workingDirectory = { mode = 'auto' },
         },
       },
 
