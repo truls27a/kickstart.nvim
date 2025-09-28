@@ -11,19 +11,10 @@ vim.keymap.set('t', 'jk', [[<C-\><C-n>]], { desc = 'Terminal: exit to Normal', s
 -- Toggle file sidebar
 vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', { desc = 'Toggle Neo-tree' })
 
--- Terminals
+-- Open new terminal
 vim.keymap.set('n', '<leader>tt', function()
   vim.cmd 'terminal'
-end, { desc = 'Terminal (here)' })
-vim.keymap.set('n', '<leader>ts', function()
-  vim.cmd 'split | terminal'
-end, { desc = 'Terminal (split)' })
-vim.keymap.set('n', '<leader>tv', function()
-  vim.cmd 'vsplit | terminal'
-end, { desc = 'Terminal (vsplit)' })
-vim.keymap.set('n', '<leader>tb', function()
-  vim.cmd 'tabnew | terminal'
-end, { desc = 'Terminal (tab)' })
+end, { desc = 'Open new terminal' })
 
 -- Bufferline navigation
 vim.keymap.set('n', '<S-h>', '<cmd>BufferLineCyclePrev<CR>', { desc = 'Previous buffer' })
