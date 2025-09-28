@@ -12,7 +12,7 @@ vim.keymap.set('t', 'jk', [[<C-\><C-n>]], { desc = 'Terminal: exit to Normal', s
 vim.keymap.set('n', '<leader>e', '<cmd>Neotree toggle<CR>', { desc = 'Toggle Neo-tree' })
 
 -- Open new terminal
-vim.keymap.set('n', '<leader>tt', function()
+vim.keymap.set('n', '<leader>t', function()
   vim.cmd 'terminal'
 end, { desc = 'Open new terminal' })
 
