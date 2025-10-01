@@ -21,7 +21,8 @@ vim.api.nvim_create_autocmd({ 'InsertLeave', 'TextChanged', 'FocusLost', 'BufLea
       and vim.api.nvim_buf_get_name(buf) ~= ''
       and vim.bo[buf].modified
     then
-      vim.cmd 'silent! write' -- triggers format-on-save too
+      require('conform').format({ buf = buf, timeout_ms = 1000 })
+      vim.cmd 'silent! write'
     end
   end,
 })
