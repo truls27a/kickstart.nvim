@@ -1,6 +1,10 @@
 -- [[ Custom Keymaps ]]
 -- Your personal keybinding configurations
 
+-- Save file
+vim.keymap.set('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save file' })
+vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save file' })
+
 -- Press jk quickly to return to Normal mode
 -- Works in Insert, Visual, and Select mode
 vim.keymap.set({ 'i', 'v', 's' }, 'jk', '<Esc>', { desc = 'Exit → Normal', silent = true })
