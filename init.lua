@@ -28,8 +28,7 @@ require('lazy').setup({
   { import = 'kickstart.plugins' },
 
   -- Import all custom plugins
-  -- NOTE: Currently there are no custom plugins, thus the import has been commented out
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
 }, {
   ui = {
     icons = vim.g.have_nerd_font and {} or {
