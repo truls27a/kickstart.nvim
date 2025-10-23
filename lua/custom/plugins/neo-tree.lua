@@ -10,7 +10,6 @@ return {
       'MunifTanjim/nui.nvim',
       'nvim-tree/nvim-web-devicons', -- optional, but recommended
     },
-    lazy = false, -- neo-tree will lazily load itself
     keys = {
       { '<leader>e', '<cmd>Neotree toggle<cr>', desc = 'Toggle Neo-tree' },
     },
