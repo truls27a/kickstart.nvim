@@ -11,7 +11,12 @@ return {
     vim.keymap.set('i', '<C-y>', 'copilot#Accept("\\<CR>")', {
       expr = true,
       replace_keycodes = false,
-      desc = 'Accept Copilot suggestion'
+      desc = 'Accept Copilot suggestion',
+    })
+
+    -- Map Ctrl+e to dismiss suggestion
+    vim.keymap.set('i', '<C-e>', '<Plug>(copilot-dismiss)', {
+      desc = 'Dismiss Copilot suggestion',
     })
   end,
 }
