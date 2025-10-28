@@ -10,7 +10,13 @@ return {
   },
   config = function()
     local harpoon = require 'harpoon'
-    harpoon:setup()
+    harpoon:setup {
+      terminals = {
+        VimLeavePre = function(_, list)
+          list:clear()
+        end,
+      },
+    }
 
     -- File list keybindings
     vim.keymap.set('n', '<leader>fa', function()
