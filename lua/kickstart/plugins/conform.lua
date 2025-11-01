@@ -47,7 +47,7 @@ return {
       -- Rust
       rust = { 'rustfmt' },
       -- Swift
-      swift = { 'swift_format' },
+      swift = { 'swiftformat' },
     },
   },
 }
