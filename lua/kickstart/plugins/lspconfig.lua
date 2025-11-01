@@ -309,12 +309,6 @@ return {
           },
         },
       },
-
-      sourcekit = {
-        cmd = { 'sourcekit-lsp' },
-        filetypes = { 'swift', 'objective-c', 'objective-cpp' },
-        root_dir = require('lspconfig.util').root_pattern('Package.swift', '.git', '*.xcodeproj', '*.xcworkspace'),
-      },
     }
 
     -- Ensure the servers and tools above are installed
@@ -354,6 +348,14 @@ return {
           require('lspconfig')[server_name].setup(server)
         end,
       },
+    }
+
+    -- Configure sourcekit-lsp manually (comes with Xcode, not available via Mason)
+    require('lspconfig').sourcekit.setup {
+      cmd = { 'sourcekit-lsp' },
+      filetypes = { 'swift', 'objective-c', 'objective-cpp' },
+      root_dir = require('lspconfig.util').root_pattern('Package.swift', '.git', '*.xcodeproj', '*.xcworkspace'),
+      capabilities = capabilities,
     }
   end,
 }
