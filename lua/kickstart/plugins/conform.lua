@@ -46,6 +46,8 @@ return {
       python = { 'isort', 'black' },
       -- Rust
       rust = { 'rustfmt' },
+      -- Swift
+      swift = { 'swift_format' },
     },
   },
 }

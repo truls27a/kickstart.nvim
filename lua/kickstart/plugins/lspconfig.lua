@@ -309,6 +309,12 @@ return {
           },
         },
       },
+
+      sourcekit = {
+        cmd = { 'sourcekit-lsp' },
+        filetypes = { 'swift', 'objective-c', 'objective-cpp' },
+        root_dir = require('lspconfig.util').root_pattern('Package.swift', '.git', '*.xcodeproj', '*.xcworkspace'),
+      },
     }
 
     -- Ensure the servers and tools above are installed
@@ -331,6 +337,7 @@ return {
       'isort', -- Used to sort Python imports
       'prettier', -- Used to format TypeScript/JavaScript code
       'rustfmt', -- Used to format Rust code
+      'swift-format', -- Used to format Swift code
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
