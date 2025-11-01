@@ -350,11 +350,13 @@ return {
     }
 
     -- Configure sourcekit-lsp manually (comes with Xcode, not available via Mason)
-    require('lspconfig').sourcekit.setup {
+    -- Using modern Neovim 0.11+ API
+    vim.lsp.config('sourcekit', {
       cmd = { 'sourcekit-lsp' },
       filetypes = { 'swift', 'objective-c', 'objective-cpp' },
-      root_dir = require('lspconfig.util').root_pattern('Package.swift', '.git', '*.xcodeproj', '*.xcworkspace'),
+      root_markers = { 'Package.Swift', '.git', '*.xcodeproj', '*.xcworkspace' },
       capabilities = capabilities,
-    }
+    })
+    vim.lsp.enable('sourcekit')
   end,
 }
