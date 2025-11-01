@@ -352,10 +352,16 @@ return {
     -- Configure sourcekit-lsp manually (comes with Xcode, not available via Mason)
     -- Using modern Neovim 0.11+ API
     vim.lsp.config('sourcekit', {
-      cmd = { 'sourcekit-lsp' },
+      cmd = { 'xcrun', 'sourcekit-lsp' }, -- Use xcrun to get Xcode's sourcekit-lsp
       filetypes = { 'swift', 'objective-c', 'objective-cpp' },
-      root_markers = { 'Package.Swift', '.git', '*.xcodeproj', '*.xcworkspace' },
+      root_markers = { 'Package.swift', '.git', '*.xcodeproj', '*.xcworkspace' },
       capabilities = capabilities,
+      -- For Xcode projects, sourcekit-lsp will use build artifacts from DerivedData
+      init_options = {
+        ['compilation-db-search-path'] = {
+          vim.fn.expand('~/Library/Developer/Xcode/DerivedData'),
+        },
+      },
     })
     vim.lsp.enable('sourcekit')
   end,
