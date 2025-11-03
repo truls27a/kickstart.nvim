@@ -330,7 +330,6 @@ return {
       'black', -- Used to format Python code
       'isort', -- Used to sort Python imports
       'prettier', -- Used to format TypeScript/JavaScript code
-      'rustfmt', -- Used to format Rust code
     })
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
