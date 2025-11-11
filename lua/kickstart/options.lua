@@ -4,6 +4,7 @@
 --  For more options, you can see `:help option-list`
 
 -- Make relative numbers default
+vim.o.number = true
 vim.o.relativenumber = true
 
 -- Enable mouse mode, can be useful for resizing splits for example!
