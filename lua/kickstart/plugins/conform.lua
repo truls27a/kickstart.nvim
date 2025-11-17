@@ -48,6 +48,8 @@ return {
       rust = { 'rustfmt' },
       -- Swift
       swift = { 'swiftformat' },
+      -- TOML
+      toml = { 'taplo' },
     },
   },
 }
