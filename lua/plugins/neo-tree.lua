@@ -12,19 +12,10 @@ return {
   },
   opts = {
     filesystem = {
-      filtered_items = {
-        visible = false,
-        hide_dotfiles = false,
-        hide_gitignored = true,
-      },
-      follow_current_file = {
-        enabled = true,
-      },
-      use_libuv_file_watcher = true,
-    },
-    window = {
-      mappings = {
-        ['<space>'] = 'none',
+      window = {
+        mappings = {
+          ['\\'] = 'close_window',
+        },
       },
     },
   },
