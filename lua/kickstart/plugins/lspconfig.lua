@@ -224,18 +224,6 @@ return {
         },
       },
 
-      basedpyright = {
-        settings = {
-          basedpyright = {
-            analysis = {
-              typeCheckingMode = 'basic',
-              autoSearchPaths = true,
-              useLibraryCodeForTypes = true,
-            },
-          },
-        },
-      },
-
       ts_ls = {
         settings = {
           typescript = {
@@ -328,6 +316,7 @@ return {
     -- for you, so that they are available from within Neovim.
     local ensure_installed = vim.tbl_keys(servers or {})
     vim.list_extend(ensure_installed, {
+      'basedpyright', -- Python LSP (configured separately with vim.lsp.config)
       'stylua', -- Used to format Lua code
       'black', -- Used to format Python code
       'isort', -- Used to sort Python imports
@@ -336,7 +325,7 @@ return {
     require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 
     require('mason-lspconfig').setup {
-      ensure_installed = {}, -- explicitly set to an empty table (Kickstart populates installs via mason-tool-installer)
+      ensure_installed = vim.tbl_keys(servers), -- Ensure mason-lspconfig manages all servers so handlers are called
       automatic_installation = false,
       handlers = {
         function(server_name)
@@ -349,6 +338,25 @@ return {
         end,
       },
     }
+
+    -- Configure basedpyright manually to force monorepo root
+    -- Using modern Neovim 0.11+ API
+    vim.lsp.config('basedpyright', {
+      cmd = { 'basedpyright-langserver', '--stdio' },
+      filetypes = { 'python' },
+      root_dir = '/Users/trulsborgvall/Developer/personal/kokoll/kokoll',
+      capabilities = capabilities,
+      settings = {
+        basedpyright = {
+          analysis = {
+            typeCheckingMode = 'basic',
+            autoSearchPaths = true,
+            useLibraryCodeForTypes = true,
+          },
+        },
+      },
+    })
+    vim.lsp.enable('basedpyright')
 
     -- Configure sourcekit-lsp manually (comes with Xcode, not available via Mason)
     -- Using modern Neovim 0.11+ API
