@@ -23,7 +23,7 @@ return {
         'eslint',
         'lua_ls',
         'taplo',
-        'basedpyright',
+        'pyright',
 
         -- Formatters
         'stylua',

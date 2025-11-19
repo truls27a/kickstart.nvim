@@ -18,7 +18,7 @@ M.setup = function()
       'eslint',
       'lua_ls',
       'taplo',
-      'basedpyright',
+      'pyright',
     },
     automatic_installation = false,
   }
@@ -37,7 +37,7 @@ M.setup = function()
     'eslint',
     'lua_ls',
     'taplo',
-    'basedpyright',
+    'pyright',
     'sourcekit',
   }
 end
