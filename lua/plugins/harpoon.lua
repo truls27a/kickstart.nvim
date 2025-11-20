@@ -4,7 +4,13 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     local harpoon = require('harpoon')
-    harpoon:setup()
+    harpoon:setup {
+      terminals = {
+        VimLeavePre = function(_, list)
+          list:clear()
+        end,
+      },
+    }
 
     -- File keymaps
     vim.keymap.set('n', '<leader>fa', function()
