@@ -8,7 +8,7 @@ return {
       or vim.fn.getcwd()
   end,
   settings = {
-    basedpyright = {
+    pyright = {
       analysis = {
         typeCheckingMode = 'basic',
         autoSearchPaths = true,
