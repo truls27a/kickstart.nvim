@@ -4,14 +4,13 @@ return {
   dependencies = { 'nvim-lua/plenary.nvim' },
   config = function()
     local harpoon = require 'harpoon'
-    harpoon:setup {}
-
-    -- Clear terminal harpoon list when leaving Neovim
-    vim.api.nvim_create_autocmd('VimLeavePre', {
-      callback = function()
-        harpoon:list('term'):clear()
-      end,
-    })
+    harpoon:setup {
+      term = {
+        VimLeavePre = function(evt, list)
+          list:clear()
+        end,
+      },
+    }
 
     -- File keymaps
     vim.keymap.set('n', '<leader>fa', function()
