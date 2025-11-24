@@ -17,3 +17,10 @@ vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold', 'CursorHo
     end
   end,
 })
+
+-- Automatically enter insert mode when opening a terminal
+vim.api.nvim_create_autocmd('TermOpen', {
+  desc = 'Enter insert mode when opening a terminal',
+  group = vim.api.nvim_create_augroup('auto-insert-terminal', { clear = true }),
+  command = 'startinsert',
+})
