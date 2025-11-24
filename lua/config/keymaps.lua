@@ -2,7 +2,7 @@
 vim.keymap.set({ 'i', 'v', 's' }, 'jk', '<Esc>', { desc = 'Exit to normal mode' })
 
 -- Exit terminal mode with escape
-vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('t', 'jk', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
 -- Clear search highlights on <Esc>
 vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highlights' })
