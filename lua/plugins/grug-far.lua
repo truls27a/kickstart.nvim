@@ -1,5 +1,5 @@
 return {
-  'MagicDuck/grug-far.neovim',
+  'MagicDuck/grug-far.nvim',
   cmd = 'GrugFar',
   keys = {
     { '<leader>sr', '<cmd>GrugFar<cr>', desc = '[S]earch [R]eplace' },
