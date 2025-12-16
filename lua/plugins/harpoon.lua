@@ -55,8 +55,8 @@ return {
       harpoon.ui:toggle_quick_menu(term_harpoon)
     end, { desc = 'Harpoon [T]erminal [H]arpoon menu' })
 
-    -- Navigate to terminals 1-5
-    for i = 1, 5 do
+    -- Navigate to terminals 1-6
+    for i = 1, 6 do
       vim.keymap.set('n', '<leader>t' .. i, function()
         term_harpoon:select(i)
       end, { desc = 'Harpoon [T]erminal ' .. i })
