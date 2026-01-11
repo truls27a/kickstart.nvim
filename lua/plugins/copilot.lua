@@ -1,6 +1,6 @@
 return {
   'github/copilot.vim',
-  enabled = false,
+  enabled = true,
   config = function()
     -- Accept suggestion with Ctrl-y
     vim.keymap.set('i', '<C-y>', 'copilot#Accept("\\<CR>")', {
