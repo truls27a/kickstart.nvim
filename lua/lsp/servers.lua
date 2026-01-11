@@ -39,6 +39,7 @@ M.setup = function()
     'taplo',
     'pyright',
     'sourcekit',
+    'dartls',
   }
 end
 

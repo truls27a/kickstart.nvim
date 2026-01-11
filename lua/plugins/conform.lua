@@ -40,6 +40,7 @@ return {
       rust = { 'rustfmt' },
       swift = { 'swiftformat' },
       toml = { 'taplo' },
+      dart = { 'dart_format' },
     },
   },
 }
