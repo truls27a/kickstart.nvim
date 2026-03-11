@@ -11,9 +11,6 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>', { desc = 'Clear search highl
 vim.keymap.set('n', '<C-s>', '<cmd>w<CR>', { desc = 'Save file' })
 vim.keymap.set('n', '<leader>w', '<cmd>w<CR>', { desc = 'Save file' })
 
--- Open new terminal
-vim.keymap.set('n', '<leader>t', '<cmd>terminal<CR>', { desc = 'Open terminal' })
-
 -- Navigate between windows
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', { desc = 'Move focus to left window' })
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', { desc = 'Move focus to right window' })

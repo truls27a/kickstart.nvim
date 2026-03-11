@@ -11,6 +11,10 @@ return {
     { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Toggle [E]xplorer (Neo-tree)' },
   },
   opts = {
+    window = {
+      position = 'left',
+      width = 35,
+    },
     filesystem = {
       window = {
         mappings = {
