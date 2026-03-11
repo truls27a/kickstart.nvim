@@ -4,7 +4,7 @@
 require 'config.options'
 require 'config.keymaps'
 require 'config.autocmds'
-require 'config.hacker-theme'
+require 'config.themes'
 
 -- Bootstrap and setup lazy.nvim plugin manager
 require 'config.lazy'
