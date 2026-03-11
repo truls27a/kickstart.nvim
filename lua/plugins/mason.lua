@@ -8,7 +8,7 @@ return {
     require('mason').setup()
 
     -- Auto-install LSP servers and tools
-    require('mason-tool-installer').setup({
+    require('mason-tool-installer').setup {
       ensure_installed = {
         -- LSP servers
         'rust_analyzer',
@@ -31,6 +31,6 @@ return {
         'isort',
         'prettier',
       },
-    })
+    }
   end,
 }
