@@ -18,3 +18,14 @@ vim.api.nvim_create_autocmd({ 'FocusGained', 'BufEnter', 'CursorHold', 'CursorHo
   end,
 })
 
+-- Terminal: enable line numbers, disable signcolumn
+vim.api.nvim_create_autocmd('TermOpen', {
+  desc = 'Configure terminal buffers',
+  group = vim.api.nvim_create_augroup('term-config', { clear = true }),
+  callback = function()
+    vim.opt_local.number = true
+    vim.opt_local.relativenumber = true
+    vim.opt_local.signcolumn = 'no'
+  end,
+})
+

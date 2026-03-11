@@ -29,23 +29,15 @@ local function buf_valid(buf)
   return buf and api.nvim_buf_is_valid(buf)
 end
 
-local function configure_term_win(win)
-  vim.wo[win].number = false
-  vim.wo[win].relativenumber = false
-  vim.wo[win].signcolumn = 'no'
-end
-
 local function open_term_in_win(win)
   api.nvim_set_current_win(win)
   vim.cmd 'terminal'
-  configure_term_win(win)
   return api.nvim_get_current_buf()
 end
 
 local function focus_term(win, buf)
   api.nvim_win_set_buf(win, buf)
   api.nvim_set_current_win(win)
-  configure_term_win(win)
 end
 
 local function resize_right_column()
