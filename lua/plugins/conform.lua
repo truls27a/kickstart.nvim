@@ -36,7 +36,7 @@ return {
       css = { 'prettier' },
       html = { 'prettier' },
       markdown = { 'prettier' },
-      python = { 'isort', 'black' },
+      python = { 'ruff_fix', 'ruff_format' },
       rust = { 'rustfmt' },
       swift = { 'swiftformat' },
       toml = { 'taplo' },
