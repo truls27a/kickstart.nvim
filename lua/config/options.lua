@@ -66,5 +66,8 @@ vim.opt.shiftwidth = 2
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 
+-- Hide the tabline
+vim.opt.showtabline = 0
+
 -- Cursor shape configuration
 vim.opt.guicursor = 'n-v-c:block,i-ci-ve:ver25,t:ver25,r-cr:hor20,o:hor50'
