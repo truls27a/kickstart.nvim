@@ -11,6 +11,7 @@ return {
     { '<leader>e', '<cmd>Neotree toggle<CR>', desc = 'Toggle [E]xplorer (Neo-tree)' },
   },
   opts = {
+    open_files_do_not_replace_types = { 'trouble', 'qf' },
     window = {
       position = 'left',
       width = 35,
