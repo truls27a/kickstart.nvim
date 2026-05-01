@@ -24,12 +24,14 @@ return {
         'lua_ls',
         'taplo',
         'pyright',
+        'gopls',
 
         -- Formatters
         'stylua',
         'black',
         'isort',
         'prettier',
+        'goimports',
       },
     }
   end,

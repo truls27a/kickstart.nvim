@@ -38,6 +38,7 @@ return {
       markdown = { 'prettier' },
       python = { 'ruff_fix', 'ruff_format' },
       rust = { 'rustfmt' },
+      go = { 'goimports' },
       swift = { 'swiftformat' },
       toml = { 'taplo' },
       dart = { 'dart_format' },

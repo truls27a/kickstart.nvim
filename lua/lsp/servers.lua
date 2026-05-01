@@ -19,6 +19,7 @@ M.setup = function()
       'lua_ls',
       'taplo',
       'pyright',
+      'gopls',
     },
     automatic_installation = false,
   }
@@ -40,6 +41,7 @@ M.setup = function()
     'pyright',
     'sourcekit',
     'dartls',
+    'gopls',
   }
 end
 

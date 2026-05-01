@@ -21,6 +21,7 @@ return {
       'python',
       'rust',
       'swift',
+      'go',
     },
     auto_install = true,
     highlight = {
