@@ -1,7 +1,9 @@
 return {
   'nvim-telescope/telescope.nvim',
   event = 'VimEnter',
-  branch = '0.1.x',
+  -- `master`, not `0.1.x`: 0.1.x calls `nvim-treesitter.configs`/`parsers`, which the
+  -- nvim-treesitter `main` branch deleted. master uses core `vim.treesitter` instead.
+  branch = 'master',
   dependencies = {
     'nvim-lua/plenary.nvim',
     {
